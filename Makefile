@@ -52,6 +52,8 @@ reindex:
 secret:
 	@test -f app.secret.env || echo "secret_key_base=`openssl rand -hex 32`" > app.secret.env
 	@cat app.secret.env
+copy-mp-verify:
+	docker cp MP_verify* app:/var/www/homeland/public/
 clean:
 	@echo "Clean Docker images..."
 	@docker ps -aqf status=exited | xargs docker rm && docker images -qf dangling=true | xargs docker rmi

@@ -12,3 +12,11 @@ Homeland Docker
 ## 使用说明
 
 http://gethomeland.com/install/
+
+## 需要微信验证
+1. 下载MP_verify_xxxx.txt 文件到根目录
+2. 拷贝文件到rails的public目录
+
+```
+make copy-mp-vefify
+```
