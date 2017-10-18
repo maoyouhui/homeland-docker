@@ -91,6 +91,8 @@ defaults: &defaults
     secret: '<%= ENV['sso.secret'] %>'
   github_token: "<%= ENV['github_token'] %>"
   github_secret: "<%= ENV['github_secret'] %>"
+  wechat_token: "<%= ENV['wechat_token'] %>"
+  wechat_secret: "<%= ENV['wechat_secret'] %>"
 
 production:
   <<: *defaults
