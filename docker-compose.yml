@@ -42,7 +42,7 @@ services:
 
   web:
     container_name: 'homeland_web'
-    image: homeland/homeland:3.0.9
+    image: jiaji/homeland
     links:
       - app
       - app_backup
@@ -60,7 +60,7 @@ services:
 
   app: &app_base
     container_name: 'homeland_app'
-    image: homeland/homeland:3.0.9
+    image: jiaji/homeland
     env_file:
       - app.default.env
       - app.local.env

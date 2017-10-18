@@ -1,1 +1,1 @@
-docker build -t homeland/homeland:latest .
+docker build -t jiaji/homeland:latest .
