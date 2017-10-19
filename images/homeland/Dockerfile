@@ -5,13 +5,15 @@ MAINTAINER Jiaji Yin "https://github.com/Fykec"
 ENV RAILS_ENV 'production'
 RUN curl https://get.acme.sh | sh
 
-ENV HOMELAND_VERSION '3.0.9'
+ENV HOMELAND_VERSION 'd7950e0cb81399b1e53692d8a839e729d9b77f59'
 
 RUN useradd ruby -s /bin/bash -m -U &&\
     mkdir -p /var/www &&\
     cd /var/www &&\
     git clone https://github.com/maoyouhui/homeland.git
-RUN cd /var/www/homeland && git pull && bundle install --deployment &&\
+RUN cd /var/www/homeland &&\
+    git pull && git checkout ${HOMELAND_VERSION} &&\
+    bundle install --deployment &&\
     find /var/www/homeland/vendor/bundle -name tmp -type d -exec rm -rf {} + &&\
     chown -R ruby:ruby /var/www
 
