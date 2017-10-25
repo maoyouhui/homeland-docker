@@ -54,6 +54,8 @@ secret:
 	@cat app.secret.env
 copy-mp-verify:
 	docker cp MP_verify* homeland_web:/var/www/homeland/public/
+dbrest:
+	@$(RUN) bundle exec rails db:reset
 clean:
 	@echo "Clean Docker images..."
 	@docker ps -aqf status=exited | xargs docker rm && docker images -qf dangling=true | xargs docker rmi
