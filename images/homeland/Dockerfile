@@ -5,7 +5,7 @@ MAINTAINER Jiaji Yin "https://github.com/Fykec"
 ENV RAILS_ENV 'production'
 RUN curl https://get.acme.sh | sh
 
-ENV HOMELAND_VERSION '158e53d07287bab0bd0d263b34eefa1806f5613f'
+ENV HOMELAND_VERSION 'dc0928bc0d7255c94e458619b32b99e43f0a3446'
 
 RUN useradd ruby -s /bin/bash -m -U &&\
     mkdir -p /var/www &&\
