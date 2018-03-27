@@ -43,7 +43,7 @@ stop:
 stop-all:
 	@docker-compose down
 console:
-	@$(RUN) bundle exec rails console
+	@$(RUN) bundle exec rails console --sandbox
 reindex:
 	@echo "Reindex ElasticSearch..."
 	@$(RAKE) environment elasticsearch:import:model CLASS=Topic FORCE=y

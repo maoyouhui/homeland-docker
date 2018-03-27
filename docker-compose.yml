@@ -53,8 +53,8 @@ services:
     volumes_from:
       - app
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
+      - "445:443"
 
   app: &app_base
     container_name: 'homeland_app'
