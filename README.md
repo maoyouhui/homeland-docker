@@ -13,6 +13,12 @@ Homeland Docker
 
 http://gethomeland.com/install/
 
+## Build 最新homeland docker image
+
+```
+./build-homeland
+```
+
 ## 需要微信验证
 1. 下载MP_verify_xxxx.txt 文件到根目录
 2. 拷贝文件到rails的public目录
