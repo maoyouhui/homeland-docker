@@ -1,0 +1,3 @@
+[submodule "homeland"]
+	path = homeland
+	url = git@github.com:maoyouhui/homeland.git
